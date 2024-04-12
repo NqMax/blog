@@ -6,6 +6,8 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
+    --main: 0 91% 71%;
+    --hl: 0 0% 100%; /* Highlight */
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -37,7 +39,9 @@
 
   .dark {
     --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
+    --foreground: 0 0% 83%;
+    --main: 0 91% 71%;
+    --hl: 0 0% 100%; /* Highlight */
 
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
