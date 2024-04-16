@@ -1,11 +1,12 @@
 // Components
 import { Gallery } from "@/components/gallery";
 import { Socials } from "@/components/socials";
+import { LatestArticles } from "@/components/latestArticles";
 
 export default function Home() {
   return (
     <div className="container flex min-h-screen gap-x-10">
-      <main className="flex w-1/2 flex-col gap-y-4 py-24">
+      <main className="sticky top-0 flex max-h-screen w-1/2 flex-col gap-y-4 py-24">
         <div className="mb-8">
           <p className="font-mono text-lg text-main">Hi, my name is Max</p>
           <h1 className="font-mono text-4xl font-bold text-hl [text-shadow:#fff_0px_0px_0px]">
@@ -38,8 +39,9 @@ export default function Home() {
           <div className="h-6 w-full rounded bg-[url(/home/footer.svg)]" />
         </div>
       </main>
-      <div className="flex w-1/2 flex-col gap-y-4 py-24">
-        <h2 className="font-mono text-lg text-main">Hungry for a read?</h2>
+      <div className="flex w-1/2 flex-col py-24">
+        <h2 className="font-mono text-lg text-main"><span className="underline underline-offset-2">home</span> blog</h2>
+        <LatestArticles />
       </div>
     </div>
   );
