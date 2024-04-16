@@ -20,7 +20,7 @@ export function ArticleCard({
     <article className="flex flex-col gap-y-2 border-b border-dashed py-4 first:pb-4">
       <Link href={url} className="group flex flex-col gap-y-2">
         <div className="flex items-center gap-x-2 text-nowrap">
-          <h3 className="text-lg font-medium text-hl group-hover:underline">
+          <h3 className="text-lg font-medium text-hl underline decoration-transparent transition group-hover:decoration-current">
             {title}
           </h3>
           <span className="w-full border-b border-main" />
