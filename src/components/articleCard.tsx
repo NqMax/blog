@@ -28,7 +28,7 @@ export function ArticleCard({
             {date}
           </time>
         </div>
-        <p className="text-neutral-400 transition group-hover:text-foreground">
+        <p className="line-clamp-3 text-neutral-400 transition group-hover:text-foreground">
           {introduction}
         </p>
       </Link>
