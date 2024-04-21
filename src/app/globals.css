@@ -39,9 +39,9 @@
 
   .dark {
     --background: 0 0% 3.9%;
-    --foreground: 0 0% 83%;
+    --foreground: 0 0% 64%;
     --main: 0 91% 71%;
-    --hl: 0 0% 100%; /* Highlight */
+    --hl: 0 0% 90%; /* Highlight */
 
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
