@@ -24,7 +24,7 @@ export function ArticleCard({
             {title}
           </h3>
           <span className="grow border-b min-w-10 border-main" />
-          <time className="text-sm text-neutral-500 transition group-hover:text-foreground">
+          <time className="text-sm text-neutral-500 transition group-hover:text-foreground text-nowrap">
             {date}
           </time>
         </div>
