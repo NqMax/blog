@@ -6,4 +6,5 @@ export const tagsColorMapping = {
   Tailwind: "hover:text-sky-400",
   "Node.js": "hover:text-green-500",
   Rust: "hover:text-red-500",
+  MDX: "hover:text-yellow-500",
 };
