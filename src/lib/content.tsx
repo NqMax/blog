@@ -5,7 +5,7 @@ export type PostMetadata = {
   slug: string;
   description: string;
   date: string;
-  tags: { name: string; slug: string }[];
+  tags: string[];
 };
 
 export async function getPosts(): Promise<PostMetadata[]> {

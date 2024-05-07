@@ -1,7 +1,7 @@
 import Link from "next/link";
 // Utils
 import { cn } from "@/lib/utils";
-import { tagsColorMapping } from "@/lib/tagsColorMapping";
+import { tagsMapping } from "@/lib/tagsMapping";
 import { type PostMetadata } from "@/lib/content";
 
 export function ArticleCard({
@@ -33,10 +33,10 @@ export function ArticleCard({
             key={index}
             className={cn(
               "hover:text-white hover:underline",
-              tagsColorMapping[tag.name as keyof typeof tagsColorMapping],
+              tagsMapping[tag as keyof typeof tagsMapping].color,
             )}
           >
-            <Link href={`/blog/tags/${tag.slug}`}>#{tag.name}</Link>
+            <Link href={`/blog/tags/${tag}`}>#{tagsMapping[tag as keyof typeof tagsMapping].name}</Link>
           </li>
         ))}
       </ul>
