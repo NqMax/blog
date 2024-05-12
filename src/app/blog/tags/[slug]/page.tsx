@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getPost, getPosts } from "@/lib/content";
 // Components
 import { TaggedArticles } from "@/components/taggedArticles";
 // Icons
@@ -6,6 +7,32 @@ import { SquareArrowUpLeft } from "lucide-react";
 // Utils
 import { tagsMapping } from "@/lib/tagsMapping";
 
+// Return a list of `params` to populate the [slug] dynamic segment
+export async function generateStaticParams() {
+  const posts = await getPosts();
+
+  const slugs: string[] = [];
+  for (const post of posts) {
+    post.tags.forEach((tag) => {
+      if (!slugs.includes(tag)) {
+        slugs.push(tag);
+      }
+    });
+  }
+
+  console.log(
+    slugs.map((slug) => ({
+      slug: slug,
+    })),
+  );
+  
+  return slugs.map((slug) => ({
+    slug: slug,
+  }));
+}
+
+// Multiple versions of this page will be statically generated
+// using the `params` returned by `generateStaticParams`
 export default function Tags({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
