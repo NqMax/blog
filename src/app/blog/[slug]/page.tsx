@@ -2,6 +2,7 @@ import { getPost, getPosts } from "@/lib/content";
 import { Metadata, ResolvingMetadata } from "next";
 // Components
 import { PostHeaderNav } from "@/components/postHeaderNav";
+import { TableOfContents } from "@/components/tableOfContents";
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
@@ -38,13 +39,16 @@ export default async function BlogPost({
   const { default: Post, metadata } = await getPost(params.slug);
 
   return (
-    <div className="container xl:max-w-screen-lg">
-      <main className="min-h-screen py-20 lg:border-x lg:px-24">
-        <PostHeaderNav />
-        <article className="prose prose-neutral mx-auto dark:prose-invert">
-          <Post />
-        </article>
-      </main>
+    <div className="flex">
+      <div className="container xl:mx-0 xl:max-w-screen-lg 2xl:ml-auto">
+        <main className="min-h-screen py-20 lg:border-x lg:px-24 xl:border-l-0 xl:pl-12 2xl:border-l 2xl:pl-24">
+          <PostHeaderNav />
+          <article className="prose prose-neutral mx-auto dark:prose-invert">
+            <Post />
+          </article>
+        </main>
+      </div>
+      <TableOfContents />
     </div>
   );
 }
