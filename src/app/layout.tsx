@@ -20,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} ${robotoMono.variable} dark`}>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${inter.className} ${robotoMono.variable} dark`}
+      >
         {children}
       </body>
     </html>

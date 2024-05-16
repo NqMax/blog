@@ -43,7 +43,7 @@ export default async function BlogPost({
       <div className="container xl:mx-0 xl:max-w-screen-lg 2xl:ml-auto">
         <main className="min-h-screen py-20 lg:border-x lg:px-24 xl:border-l-0 xl:pl-12 2xl:border-l 2xl:pl-24">
           <PostHeaderNav />
-          <article className="prose prose-neutral mx-auto dark:prose-invert">
+          <article className="prose prose-neutral mx-auto dark:prose-invert prose-headings:scroll-mt-4">
             <Post />
           </article>
         </main>
