@@ -13,6 +13,9 @@ export async function generateStaticParams() {
   }));
 }
 
+// Dynamic segments not included in generateStaticParams will return a 404.
+export const dynamicParams = false;
+
 export async function generateMetadata(
   {
     params,
@@ -44,6 +47,12 @@ export default async function BlogPost({
         <main className="min-h-screen py-20 lg:border-x lg:px-24 xl:border-l-0 xl:pl-12 2xl:border-l 2xl:pl-24">
           <PostHeaderNav />
           <article className="prose prose-neutral mx-auto dark:prose-invert prose-headings:scroll-mt-4">
+            <time
+              dateTime={new Date(metadata.date).toISOString()}
+              className="text-sm"
+            >
+              {metadata.date}
+            </time>
             <Post />
           </article>
         </main>

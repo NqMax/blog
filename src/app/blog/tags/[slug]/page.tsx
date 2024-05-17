@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getPost, getPosts } from "@/lib/content";
+import { getPosts } from "@/lib/content";
 // Components
 import { TaggedArticles } from "@/components/taggedArticles";
 // Icons
@@ -20,16 +20,13 @@ export async function generateStaticParams() {
     });
   }
 
-  console.log(
-    slugs.map((slug) => ({
-      slug: slug,
-    })),
-  );
-  
   return slugs.map((slug) => ({
     slug: slug,
   }));
 }
+
+// Dynamic segments not included in generateStaticParams will return a 404.
+export const dynamicParams = false;
 
 // Multiple versions of this page will be statically generated
 // using the `params` returned by `generateStaticParams`
