@@ -12,7 +12,7 @@ export function TableOfContents() {
   }, []);
 
   return (
-    <div className="relative top-[150px] mr-auto hidden h-fit grow xl:block 2xl:grow-0">
+    <div className="sticky top-[150px] mr-auto hidden h-fit grow xl:block 2xl:grow-0">
       <div className="group absolute flex flex-col gap-y-2 pr-8 2xl:min-w-[20vw]">
         <div className="flex items-center font-mono text-lg text-hl">
           Table of Contents
