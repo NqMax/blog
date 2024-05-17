@@ -19,7 +19,7 @@ export function ArticleCard({
             {title}
           </h3>
           <span className="min-w-10 grow border-b border-main" />
-          <time className="text-nowrap text-sm font-medium text-neutral-500 transition group-hover:text-foreground">
+          <time dateTime={new Date(date).toISOString()} className="text-nowrap text-sm font-medium text-neutral-500 transition group-hover:text-foreground">
             {date}
           </time>
         </div>
